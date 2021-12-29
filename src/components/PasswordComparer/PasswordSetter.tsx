@@ -1,19 +1,27 @@
 import { Button, HStack, Input, InputGroup, } from '@chakra-ui/react';
 import React from 'react';
+import { PasswordComparerProps } from '../../utils/Interface';
 
-const PasswordSetter = (): JSX.Element => {
+const PasswordSetter = ({password, setPassword, userPassword, setUserPassword}:PasswordComparerProps): JSX.Element => {
     const [show, setShow] = React.useState(false)
     const [disabled, setDisabled] = React.useState(false)
 
-    const handleShowClick = () => setShow(!show)
-    const handleDisabledClick = () => setDisabled(!disabled)
+    const handleShowClick = () => setShow(!show); 
+    const handleDisabledClick = () => handleMultiple();
+    function handleMultiple(){
+      setDisabled(!disabled);
+      if (userPassword !== ""){
+        setPassword(userPassword)
+      }
+    }
+    const lockOpen = <i className="fas fa-lock-open"></i>
+    const lockClosed =  <i className="fas fa-lock"></i>
 
     return (
 
       <HStack>
         <Button h='1.75rem' size='sm' onClick={handleDisabledClick}>
-
-          {disabled ? <i className="fas fa-lock-open"></i> : <i className="fas fa-lock"></i>}
+          {disabled ? lockOpen : lockClosed}
         </Button>
         <InputGroup w = {[300,400,500]}>
           <Input
@@ -21,9 +29,12 @@ const PasswordSetter = (): JSX.Element => {
             type={show ? 'text' : 'password'}
             placeholder='Enter password'
             disabled = {disabled}
+            value = {userPassword}
+            onChange = {(event) => setUserPassword(event.target.value)}
           />
         </InputGroup>
-        <Button h='1.75rem' size='sm' onClick={handleShowClick}>
+        <Button h='1.75rem' size='sm' 
+            onClick={handleShowClick}>
             {show ? 'Hide' : 'Show'}
         </Button>
       </HStack>
