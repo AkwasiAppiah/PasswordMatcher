@@ -3,14 +3,18 @@ import './App.css';
 import Header from './components/Header';
 import PasswordComparer from './components/PasswordComparer';
 import Footer from './components/Footer';
+import { ChakraProvider } from '@chakra-ui/react';
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <PasswordComparer/>
-      <Footer/>
-    </div>
+    <ChakraProvider>
+      <div className="App">
+        <Header/>
+        <PasswordComparer/>
+        <Footer/>
+      </div>
+    </ChakraProvider>
+
   );
 }
 
