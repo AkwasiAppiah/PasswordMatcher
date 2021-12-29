@@ -1,4 +1,4 @@
-import { Button, HStack, Input, InputGroup, InputRightElement, } from '@chakra-ui/react';
+import { Button, HStack, Input, InputGroup, } from '@chakra-ui/react';
 import React from 'react';
 
 const PasswordSetter = (): JSX.Element => {
@@ -15,19 +15,17 @@ const PasswordSetter = (): JSX.Element => {
 
           {disabled ? <i className="fas fa-lock-open"></i> : <i className="fas fa-lock"></i>}
         </Button>
-        <InputGroup size='md'>
+        <InputGroup w = {[300,400,500]}>
           <Input
             pr='4.5rem'
             type={show ? 'text' : 'password'}
             placeholder='Enter password'
             disabled = {disabled}
           />
-          <InputRightElement width='4.5rem'>
-            <Button h='1.75rem' size='sm' onClick={handleShowClick}>
-              {show ? 'Hide' : 'Show'}
-            </Button>
-          </InputRightElement>
         </InputGroup>
+        <Button h='1.75rem' size='sm' onClick={handleShowClick}>
+            {show ? 'Hide' : 'Show'}
+        </Button>
       </HStack>
     )
     }

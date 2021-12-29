@@ -1,15 +1,16 @@
-import React from 'react';
+import { Center, VStack } from '@chakra-ui/react';
 import PasswordInputer from './PasswordInputer';
 import PasswordSetter from './PasswordSetter';
 
 const PasswordComparer = (): JSX.Element => {
 
     return(
-        <div>
-            <PasswordInputer/>
-            <PasswordSetter/>
-        </div>
-
+        <Center>
+            <VStack>
+                <PasswordSetter/>
+                <PasswordInputer/>
+            </VStack>
+        </Center>
     )
 }
 

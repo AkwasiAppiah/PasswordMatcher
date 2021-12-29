@@ -4,7 +4,7 @@ import React from 'react';
 const PasswordInputer = (): JSX.Element => {
 
     return(
-        <Input placeholder='Try your password' size='md' />
+        <Input placeholder='Try your password' size='md' w = {[300,400,500]}/>
     )
 }
 
