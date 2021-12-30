@@ -1,5 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
+body{
+  background-color: rgba(0, 0, 255, 0.603)!important;
+}
+
+*{
+  font-family: 'Indie Flower', cursive;
+}
+
 .App {
   text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 5px 10px rgba(0, 0, 0, 0.651);
+  height: 600px;
+  width: 700px;
+  background-color : lightblue;
 }
 
 .App-logo {
@@ -35,4 +54,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h1{
+
+  color: black;
+  padding : 5%;
+  padding-bottom: 4vw;
+}
+
+h3{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
 }

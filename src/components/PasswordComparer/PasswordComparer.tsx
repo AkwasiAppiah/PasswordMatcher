@@ -1,4 +1,4 @@
-import { Center, Heading, VStack } from '@chakra-ui/react';
+import { Center, Flex, HStack, Stack, VStack } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import PasswordInputer from './PasswordInputer';
 import PasswordSetter from './PasswordSetter';
@@ -27,7 +27,7 @@ const PasswordComparer = (): JSX.Element => {
       }, [password, input]);
 
     return(
-        <Center>
+        <Flex width="full" align="center" justifyContent="center">
             <VStack>
                 <PasswordSetter
                     password = {password}
@@ -50,7 +50,7 @@ const PasswordComparer = (): JSX.Element => {
                     setMatch = {setMatch}
                 />
             </VStack>
-        </Center>
+        </Flex>
     )
 }
 

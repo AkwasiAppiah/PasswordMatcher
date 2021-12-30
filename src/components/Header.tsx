@@ -1,9 +1,15 @@
+import { Heading, Stack } from '@chakra-ui/react';
 import React from 'react';
 
 const Header = (): JSX.Element => {
 
     return(
-        <h1>Hi I'm a header</h1>
+        <Stack>
+            <h1 style = {{fontSize : '80px'}}>
+                Password Matcher
+            </h1>
+        </Stack>
+        
     )
 }
 

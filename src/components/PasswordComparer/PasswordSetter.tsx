@@ -19,7 +19,7 @@ const PasswordSetter = ({password, setPassword, userPassword, setUserPassword}:P
 
     return (
 
-      <HStack>
+      <HStack pb = "10%" >
         <Button h='1.75rem' size='sm' onClick={handleDisabledClick}>
           {disabled ? lockOpen : lockClosed}
         </Button>
@@ -28,6 +28,8 @@ const PasswordSetter = ({password, setPassword, userPassword, setUserPassword}:P
             pr='4.5rem'
             type={show ? 'text' : 'password'}
             placeholder='Enter password'
+            size = 'lg'
+            fontSize={"2xl"}
             disabled = {disabled}
             value = {userPassword}
             onChange = {(event) => setUserPassword(event.target.value)}
