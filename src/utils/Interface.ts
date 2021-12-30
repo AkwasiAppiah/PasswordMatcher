@@ -5,4 +5,6 @@ export interface PasswordComparerProps{
     setInput(input:string):void
     userPassword : string;
     setUserPassword(userPassword:string):void
+    match: boolean
+    setMatch(match : boolean) : void
 }
