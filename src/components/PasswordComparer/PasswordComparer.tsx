@@ -1,4 +1,4 @@
-import { Center, Flex, HStack, Stack, VStack } from '@chakra-ui/react';
+import { Flex, VStack } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import PasswordInputer from './PasswordInputer';
 import PasswordSetter from './PasswordSetter';
