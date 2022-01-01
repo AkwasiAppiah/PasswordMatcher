@@ -20,7 +20,7 @@ const PasswordComparer = (): JSX.Element => {
 
     function checkMatch(password : string , input: string): void {
         if (password === input){
-            setMatch(!match)
+            setMatch(match => !match)
         } 
     }
        checkMatch (password, input)
