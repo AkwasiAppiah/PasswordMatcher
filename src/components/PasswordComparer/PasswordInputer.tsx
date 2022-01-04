@@ -13,7 +13,7 @@ const PasswordInputer = ({input, setInput, match}:PasswordComparerProps): JSX.El
             w = {[300,400,500]}
             value = {input}
             onChange = {(event) => setInput(event.target.value)}
-            focusBorderColor={match ? 'pink.400' : 'lime'}
+            focusBorderColor={!match ? 'pink.400' : 'lime'}
             size = 'lg'
             fontSize={"2xl"}
             />

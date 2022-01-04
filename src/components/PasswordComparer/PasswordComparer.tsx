@@ -13,16 +13,14 @@ const PasswordComparer = (): JSX.Element => {
     console.log({password});
     console.log({userPassword});
     console.log(userPassword === input)
-    console.log(input);
-
-
-    useEffect(() => {
+    console.log({input});
 
     function checkMatch(password : string , input: string): void {
-        if (password === input){
-            setMatch(match => !match)
-        } 
-    }
+
+            setMatch(password === input)
+        }
+
+    useEffect(() => {
        checkMatch (password, input)
       }, [password, input]);
 
