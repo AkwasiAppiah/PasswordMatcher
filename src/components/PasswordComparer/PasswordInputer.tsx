@@ -18,10 +18,6 @@ const PasswordInputer = ({input, setInput, match}:PasswordComparerProps): JSX.El
             fontSize={"2xl"}
             />
         </Stack>
-
-
-
-
     )
 }
 

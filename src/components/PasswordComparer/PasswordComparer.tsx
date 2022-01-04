@@ -9,14 +9,7 @@ const PasswordComparer = (): JSX.Element => {
     const [userPassword, setUserPassword] = useState("");
     const [match, setMatch] = useState(false);
 
-
-    console.log({password});
-    console.log({userPassword});
-    console.log(userPassword === input)
-    console.log({input});
-
     function checkMatch(password : string , input: string): void {
-
             setMatch(password === input)
         }
 

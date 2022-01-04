@@ -18,7 +18,6 @@ const PasswordSetter = ({password, setPassword, userPassword, setUserPassword}:P
     const lockClosed =  <i className="fas fa-lock"></i>
 
     return (
-
       <HStack pb = "10%" >
         <Button h='1.75rem' size='sm' onClick={handleDisabledClick}>
           {disabled ? lockOpen : lockClosed}
@@ -41,5 +40,5 @@ const PasswordSetter = ({password, setPassword, userPassword, setUserPassword}:P
         </Button>
       </HStack>
     )
-    }
+  }
 export default PasswordSetter
