@@ -1,6 +1,6 @@
 import { Input,Stack } from '@chakra-ui/react';
 import { PasswordComparerProps } from '../../utils/Interface';
-//import { MatchContext } from './PasswordComparer';
+
 
 const PasswordInputer = ({input, setInput, match}:PasswordComparerProps): JSX.Element => {
 
